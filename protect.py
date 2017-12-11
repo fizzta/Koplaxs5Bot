@@ -175,6 +175,7 @@ mid3 = k3.getProfile().mid
 Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,mid1,mid2,mid3,"ua35835da9375cdfc874eaa9b279997da"]
 staff=["ua35835da9375cdfc874eaa9b279997da"]
 admin=["ua35835da9375cdfc874eaa9b279997da"]
+owner=["ua35835da9375cdfc874eaa9b279997da"]
 creator=["ua35835da9375cdfc874eaa9b279997da"]
 wait = {
     'contact':False,
