@@ -71,7 +71,7 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" [>>>SHINIGAMI BOT<<<]
+helpMessage =""" [>>>NIGHT RAID BOT<<<]
 
 =====================
 [>>Public Command<<]
@@ -105,7 +105,7 @@ helpMessage =""" [>>>SHINIGAMI BOT<<<]
 [*] Stafflist
 [*] Phewit/Kuy/Join
 [*] Hushus/Bye
-[*] Kernel
+[*] Speed/Sp
 [*] Runtime
 [*] Gcancel
 [*] Ban @
@@ -137,11 +137,7 @@ helpMessage =""" [>>>SHINIGAMI BOT<<<]
 
  
 ======================================
-Open Jasa Protect Grup 
-
-Minat PM :http://line.me/ti/p/~jhon26__
-
-Nb:List harga
+            [ɴɪɢʜᴛ ʀᴀɪᴅ]
 ======================================
 """
 
@@ -173,8 +169,8 @@ mid2 = k2.getProfile().mid #Backup
 mid3 = k3.getProfile().mid
 
 Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,mid1,mid2,mid3,"ua35835da9375cdfc874eaa9b279997da"]
-staff=["ua35835da9375cdfc874eaa9b279997da"]
-admin=["ua35835da9375cdfc874eaa9b279997da"]
+staff=[""]
+admin=[""]
 owner=["ua35835da9375cdfc874eaa9b279997da"]
 creator=["ua35835da9375cdfc874eaa9b279997da"]
 wait = {
@@ -302,7 +298,7 @@ def bot(op):
             if mid in op.param3:
                 if wait["autoJoin"] == True:
                     cl.acceptGroupInvitation(op.param1)
-                    cl.sendText(op.param1,"Thanks For Invite Me.Made id line day_hard")
+                    cl.sendText(op.param1,"Set your bots")
                     print "BOT 1 Joined"
                 else:                                                                                        
                     print "autoJoin is Off"
@@ -1925,7 +1921,7 @@ def bot(op):
 
          #------------------------------- CHECK SIDER --------------------------------
             elif msg.text == "Cctv":
-                cl.sendText(msg.to, "Mencari")
+                cl.sendText(msg.to, "Pasang cctv O_O!")
                 try:
                   del wait2['readPoint'][msg.to]
                   del wait2['readMember'][msg.to]
@@ -2481,7 +2477,7 @@ def bot(op):
                 ki.sendText(msg.to,"Staff permission required.")
                 
             elif msg.text in ["Stafflist","stafflist"]:
-                if admin + staff + owner + creator == []:
+                if admin + owner + creator == []:
                     cl.sendText(msg.to,"The stafflist is empty")
                 else:
                     cl.sendText(msg.to,"Tunggu...")
@@ -2547,7 +2543,7 @@ def bot(op):
                 ki.sendText(msg.to,"Command denied.")
                 
             elif msg.text in ["Adminlist","adminlist"]:
-                if admin + staff + owner + creator == []:
+                if owner + creator == []:
                     cl.sendText(msg.to,"The Adminlist is empty")
                 else:
                     cl.sendText(msg.to,"Tunggu...")
@@ -2672,7 +2668,7 @@ def bot(op):
 #-----------------------------------------------
 
        #-------------Fungsi Respon Start---------------------#
-            elif msg.text in ["Absen","SHINIGAMI","Respon"]:
+            elif msg.text in ["Absen","Respon"]:
               if msg.from_ in staff + admin + owner:
                 ko.sendText(msg.to,"ɴɪɢʜᴛ ʀᴀɪᴅ [BOT 1]")
                 ki.sendText(msg.to,"ɴɪɢʜᴛ ʀᴀɪᴅ [BOT 2]")
@@ -2683,7 +2679,7 @@ def bot(op):
                 kb.sendText(msg.to,"ɴɪɢʜᴛ ʀᴀɪᴅ [BOT 7]")
                 cl.sendText(msg.to,"ɴɪɢʜᴛ ʀᴀɪᴅ [BOT 8]")
                 ke.sendText(msg.to,"ɴɪɢʜᴛ ʀᴀɪᴅ [BOT 9]")
-                ku.sendText(msg.to," ɴɪɢʜᴛ ʀᴀɪᴅ [BOT 10]")
+                ku.sendText(msg.to,"ɴɪɢʜᴛ ʀᴀɪᴅ [BOT 10]")
                 k1.sendText(msg.to,"ɴɪɢʜᴛ ʀᴀɪᴅ [BOT 11]")
                 k2.sendText(msg.to,"ɴɪɢʜᴛ ʀᴀɪᴅ [BOT 12]")
                 k1.sendText(msg.to,"[ɴɪɢʜᴛ ʀᴀɪᴅ] ¤Ôñ ßõT¤")
