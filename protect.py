@@ -172,11 +172,10 @@ mid1 = k1.getProfile().mid #Backup
 mid2 = k2.getProfile().mid #Backup
 mid3 = k3.getProfile().mid
 
-Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,mid1,mid2,mid3,"ud7a8fbcc2af037c2c5bf181b89fda5f7","ue027db6fbfa316a7ec28ed8d2cc2757d","ua398858a0ae7d4b27f42273fc83f05df"]
-staff=["ud7a8fbcc2af037c2c5bf181b89fda5f7","ue027db6fbfa316a7ec28ed8d2cc2757d","ua398858a0ae7d4b27f42273fc83f05df"]
-admin=["ud7a8fbcc2af037c2c5bf181b89fda5f7","ue027db6fbfa316a7ec28ed8d2cc2757d","ua398858a0ae7d4b27f42273fc83f05df","u4aae4762cdff9c8ee2ea89b615bd07e9"]
-owner=["ud7a8fbcc2af037c2c5bf181b89fda5f7","ue027db6fbfa316a7ec28ed8d2cc2757d","ua398858a0ae7d4b27f42273fc83f05df"]
-creator=["ud7a8fbcc2af037c2c5bf181b89fda5f7"]
+Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,mid1,mid2,mid3,"ua35835da9375cdfc874eaa9b279997da"]
+staff=["ua35835da9375cdfc874eaa9b279997da"]
+admin=["ua35835da9375cdfc874eaa9b279997da"]
+creator=["ua35835da9375cdfc874eaa9b279997da"]
 wait = {
     'contact':False,
     'autoJoin':True,
