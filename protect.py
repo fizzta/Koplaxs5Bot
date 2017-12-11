@@ -147,7 +147,7 @@ Nb:List harga
 
 Setgroup =""" 
 
-List Harga Bisa Langsung Cp ke creator
+List Harga Bisa Langsung Chat ke creator
 contact line: jhon26__
 
 http://line.me/ti/p/~jhon26__
