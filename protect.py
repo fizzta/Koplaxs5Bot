@@ -2512,7 +2512,7 @@ def bot(op):
                 ki.sendText(msg.to,"Command denied.")
                 ki.sendText(msg.to,"Staff permission required.")
                 
-            elif msg.text in ["Stafflist","stafflist"]:
+            elif msg.text in ["Stafflist"]:
                 if admin + owner + creator == []:
                     cl.sendText(msg.to,"The stafflist is empty")
                 else:
@@ -2578,7 +2578,7 @@ def bot(op):
               else:
                 ki.sendText(msg.to,"Command denied.")
                 
-            elif msg.text in ["Adminlist","adminlist"]:
+            elif msg.text in ["Listadmin"]:
                 if owner + creator == []:
                     cl.sendText(msg.to,"The Adminlist is empty")
                 else:
@@ -2644,7 +2644,7 @@ def bot(op):
               else:
                 ki.sendText(msg.to,"Command denied.")
                 
-            elif msg.text in ["Ownerlist","ownerlist"]:
+            elif msg.text in ["Listowner"]:
                 if admin + owner + creator == []:
                     cl.sendText(msg.to,"The Ownerlist is empty")
                 else:
