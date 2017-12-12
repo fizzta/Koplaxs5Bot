@@ -14,55 +14,55 @@ import subprocess
 #kk.login(qr=True)
 #kk.loginResult()
 
-cl = LINETCR.LINE() ##Shunsui Kyōraku(LINE)
+cl = LINETCR.LINE() # [BOT 1]
 cl.login(qr=True)
 cl.loginResult()
 
-ki = LINETCR.LINE() #Ichibē Hyōsube(LINE 1)
+ki = LINETCR.LINE() # [BOT 2]
 ki.login(qr=True)
 ki.loginResult()
 
-kk = LINETCR.LINE() #Yoruichi Shihōin(LINE 2)
+kk = LINETCR.LINE() # [BOT 3]
 kk.login(qr=True)
 kk.loginResult()
 
-kc = LINETCR.LINE() #Kenpachi Kiganjō(LINE 3)
+kc = LINETCR.LINE() # [BOT 4]
 kc.login(qr=True)
 kc.loginResult()
 
-ks = LINETCR.LINE() #Nanao Ise(LINE 4)
+ks = LINETCR.LINE() # [BOT 5]
 ks.login(qr=True)
 ks.loginResult()
 
-ka = LINETCR.LINE() #Momo Hinamori(LINE 5)
+ka = LINETCR.LINE() # [BOT 6]
 ka.login(qr=True)
 ka.loginResult()
 
-kb = LINETCR.LINE() #Rangiku Matsumoto(LINE 6)
+kb = LINETCR.LINE() # [BOT 7]
 kb.login(qr=True)
 kb.loginResult()
 
-ko = LINETCR.LINE() #Chikane Iba(LINE 7)
+ko = LINETCR.LINE() # [BOT 8]
 ko.login(qr=True)
 ko.loginResult()
 
-ke = LINETCR.LINE() #Hiyori Sarugaki(LINE 8)
+ke = LINETCR.LINE() # [BOT 9]
 ke.login(qr=True)
 ke.loginResult()
 
-ku = LINETCR.LINE() #Lisa Yadōmaru(LINE 9)
+ku = LINETCR.LINE() # [BOT 10]
 ku.login(qr=True)
 ku.loginResult()
 
-k1 = LINETCR.LINE() #Kicker(Line 10)
+k1 = LINETCR.LINE() # [BOT 11]
 k1.login(qr=True)
 k1.loginResult()
 
-k2 = LINETCR.LINE() #Kicker(Line 11)
+k2 = LINETCR.LINE() # [BOT 12]
 k2.login(qr=True)
 k2.loginResult()
 
-k3 = LINETCR.LINE()
+k3 = LINETCR.LINE() # [BOT 13]
 k3.login(qr=True)
 k3.loginResult()
 
@@ -168,7 +168,7 @@ mid1 = k1.getProfile().mid #Backup
 mid2 = k2.getProfile().mid #Backup
 mid3 = k3.getProfile().mid
 
-Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,mid1,mid2,mid3,"ua35835da9375cdfc874eaa9b279997da"]
+Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,mid1,mid2,mid3,"ua35835da9375cdfc874eaa9b279997da","uefa99e0240cf5e0d44ca7cc18b721eb26"]
 staff=["ua35835da9375cdfc874eaa9b279997da"]
 admin=["ua35835da9375cdfc874eaa9b279997da"]
 owner=["ua35835da9375cdfc874eaa9b279997da"]
@@ -545,45 +545,26 @@ def bot(op):
                
         #------Joined User Kick start------#
         
-        if op.type == 19:
+        if op.type == 19: #kalo member kekick
            if op.param2 not in Bots + staff + admin + owner + creator:
-              kk.kickoutFromGroup(op.param1,[op.param2])
-              kc.kickoutFromGroup(op.param1,[op.param2])
-              ks.kickoutFromGroup(op.param1,[op.param2])
-              ka.kickoutFromGroup(op.param1,[op.param2])
-              kb.kickoutFromGroup(op.param1,[op.param2])
-              ke.kickoutFromGroup(op.param1,[op.param2])
-              ku.kickoutFromGroup(op.param1,[op.param2])
-              ko.kickoutFromGroup(op.param1,[op.param2])
-              k1.kickoutFromGroup(op.param1,[op.param2])
-              k2.kickoutFromGroup(op.param1,[op.param2])
-              k3.kickoutFromGroup(op.param1,[op.param2])
-              random.choice(DEF).inviteIntoGroup(op.param1,[op.param3])
+              random.choice(DEF).kickoutFromGroup(op.param1,[op.param2])
+	      random.choice(DEF).inviteIntoGroup(op.param1,[op.param3])
            else: 
                pass
 
-        if op.type == 19:
+        if op.type == 19: #kalo admin kekick
            if op.param2 not in Bots + staff + admin + owner + creator:
-              kk.kickoutFromGroup(op.param1,[op.param2])
-              kc.kickoutFromGroup(op.param1,[op.param2])
-              ks.kickoutFromGroup(op.param1,[op.param2])
-              ka.kickoutFromGroup(op.param1,[op.param2])
-              kb.kickoutFromGroup(op.param1,[op.param2])
-              ke.kickoutFromGroup(op.param1,[op.param2])
-              ku.kickoutFromGroup(op.param1,[op.param2])
-              ko.kickoutFromGroup(op.param1,[op.param2])
-              k1.kickoutFromGroup(op.param1,[op.param2])
-              k2.kickoutFromGroup(op.param1,[op.param2])
-              k3.kickoutFromGroup(op.param1,[op.param2])
+              random.choice(DEF).kickoutFromGroup(op.param1,[op.param2])
               random.choice(DEF).inviteIntoGroup(op.param1,[op.param3])
            else:
                pass
 
-        if op.type == 19:
+        if op.type == 19: #kalo akun utama kekick
                 if mid in op.param3:
                     if op.param2 in Bots:
                         pass
                     try:
+			ki.kickoutFromGroup(op.param1,[op.param2])
                         kk.kickoutFromGroup(op.param1,[op.param2])
                         kc.kickoutFromGroup(op.param1,[op.param2])
                     except:
@@ -629,7 +610,7 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
-                        k2.kickoutFromGroup(op.param1,[op.param2])
+                        cl.kickoutFromGroup(op.param1,[op.param2])
                         kk.kickoutFromGroup(op.param1,[op.param2])
                         kc.kickoutFromGroup(op.param1,[op.param2])
                     except:
@@ -677,7 +658,8 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
-                        k1.kickoutFromGroup(op.param1,[op.param2])
+                        cl.kickoutFromGroup(op.param1,[op.param2])
+			ki.kickoutFromGroup(op.param1,[op.param2])
                         kc.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
@@ -724,6 +706,7 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
+			cl.kickoutFromGroup(op.param1,[op.param2])
                         kk.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
@@ -1855,6 +1838,19 @@ def bot(op):
                 else:
                     wait["comment"] = c
                     cl.sendText(msg.to,"changed\n\n" + c)
+#---------------------Sc invite owner ke group------
+            elif "inviteto: " in msg.text:
+              if msg.from_ in owner:
+                gid = msg.text.replace("invitemeto: ","")
+                if gid == "":
+                  cl.sendText(msg.to,"Invalid group id")
+                else:
+                  try:
+                    cl.findAndAddContactsByMid(msg.from_)
+                    cl.inviteIntoGroup(gid,[msg.from_])
+                  except:
+                    cl.sendText(msg.to,"Mungkin saya tidak di dalaam grup itu")
+#----------------------------------------------------
             elif msg.text in ["ã‚³ãƒ¡ãƒ³ãƒˆ:ã‚ªãƒ³","Comment on","Comment:on","è‡ªå‹•é¦–é �ç•™è¨€ï¼šé–‹"]:
               if msg.from_ in admin + owner + creator:
                 if wait["commentOn"] == True:
@@ -1916,8 +1912,7 @@ def bot(op):
                     for mi_d in wait["commentBlack"]:
                         mc += "" +cl.getContact(mi_d).displayName + "\n"
                     cl.sendText(msg.to,mc)
-                    
-        
+		
 
          #------------------------------- CHECK SIDER --------------------------------
             elif msg.text == "Cctv":
@@ -1948,16 +1943,25 @@ def bot(op):
                     else:
                         cl.sendText(msg.to, "Ketik Cctv dulu\nBaru Ketik Ciduk")
 
-#-------------------------------------------------
-            elif "/lirik " in msg.text.lower():
-                songname = msg.text.replace("/lirik ","")
-                params = {"songname":songname}
-                r = requests.get('https://ide.fdlrcn.com/workspace/yumi-apis/joox?' + urllib.urlencode(params))
-                data = r.text
-                data = json.loads(data)
-                for song in data:
-                    cl.sendText(msg.to,song[5])
-                    print "[Command] Lirik"
+ #--------------Fungsi Broadcast Finish-----------#
+
+            elif msg.text in ["LG"]: #Melihat List Group
+              if msg.from_ in admin:
+                 gids = cl.getGroupIdsJoined()
+                 h = ""
+                 for i in gids:
+                  #####gn = cl.getGroup(i).name
+                  h += "[•]%s Member\n" % (cl.getGroup(i).name   +"👉"+str(len(cl.getGroup(i).members)))
+                 cl.sendText(msg.to,"=======[List Group]======\n"+ h +"Total Group :"+str(len(gids)))
+                
+            elif msg.text in ["LG2"]: #Melihat List Group + ID Groupnya (Gunanya Untuk Perintah InviteMeTo:)
+              if msg.from_ in owner:
+                gid = cl.getGroupIdsJoined()
+                h = ""
+                for i in gid:
+                    h += "[%s]:%s\n" % (cl.getGroup(i).name,i)
+                cl.sendText(msg.to,h)
+#--------------List Group------------
 #---------------------------------------------------
             elif 'music ' in msg.text.lower():
                 try:
@@ -1997,7 +2001,7 @@ def bot(op):
                         ku.acceptGroupInvitationByTicket(msg.to,Ticket)
                         k1.acceptGroupInvitationByTicket(msg.to,Ticket)
                         k2.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        k3.acceptGroupInvitationByTicket(msg.to,Ticket)
+			k3.acceptGroupInvitationByTicket(msg.to,Ticket)
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = True
@@ -2093,8 +2097,40 @@ def bot(op):
                     except:
                         pass
             
+     #------------ Keluar Dari Semua Group------
+            elif msg.text in ["Bot out","Op bye"]: # Keluar Dari Semua Group Yang Di dalem nya  ada bot(Kalo Bot Kalian Nyangkut di Group lain :D)
+              if msg.from_ in owner:
+                 gid = cl.getGroupIdsJoined()
+                 gid = ki.getGroupIdsJoined()
+                 gid = kk.getGroupIdsJoined()
+                 gid = kc.getGroupIdsJoined()
+                 gid = ks.getGroupIdsJoined()
+                 gid = ka.getGroupIdsJoined()
+                 gid = kb.getGroupIdsJoined()
+                 gid = ko.getGroupIdsJoined()
+                 gid = ke.getGroupIdsJoined()
+                 gid = ku.getGroupIdsJoined()
+		 gid = k1.getGroupIdsJoined()
+		 gid = k2.getGroupIdsJoined()
+                 for i in gid:
+		   k2.leaveGroup(i)
+		   k1.leaveGroup(i)
+                   ku.leaveGroup(i)
+                   ke.leaveGroup(i)
+                   ko.leaveGroup(i)
+                   kb.leaveGroup(i)
+                   ka.leaveGroup(i)
+                   ks.leaveGroup(i)
+                   kc.leaveGroup(i)
+                   ki.leaveGroup(i)
+                   kk.leaveGroup(i)
+                   cl.leaveGroup(i)
+                 if wait["lang"] == "JP":
+                   cl.sendText(msg.to,"Sayonara")
+                 else:
+                   cl.sendText(msg.to,"He declined all invitations")
+    #-----------------------END-----------------------
             
-    
     #-------------Fungsi Tag All Start---------------#
             elif msg.text in ["Tag all","Tagall"]:
               if msg.from_ in staff + admin + owner + creator:
@@ -2858,19 +2894,6 @@ thread2.daemon = True
 thread2.start()
 
 
-
-def findLyric(to,song):
-    params = {'songname':song}
-    r = requests.get('https://ide.fdlrcn.com/workspace/yumi-apis/joox?'+urllib.urlencode(params))
-    data = r.text
-    data = data.encode('utf-8')
-    data = json.loads(data)
-    for song in data:
-        ki.sendText(to,"Lyrics Of " + song[0] + ":\n\n"+ song[5])
-    time.sleep(100)
-thread2 = threading.Thread(target=findLyric)
-thread2.daemon = True
-thread2.start()
 
 def findMusic(to,song):
     params = {'songname':song}
