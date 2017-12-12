@@ -136,9 +136,9 @@ helpMessage =""" [>>>NIGHT RAID BOT<<<]
 [*] Join off
 
  
-======================================
-            [ɴɪɢʜᴛ ʀᴀɪᴅ]
-======================================
+======================
+     [ɴɪɢʜᴛ ʀᴀɪᴅ]
+======================
 """
 
 Setgroup =""" 
@@ -546,14 +546,14 @@ def bot(op):
         #------Joined User Kick start------#
         
         if op.type == 19: #kalo member kekick
-           if op.param2 not in Bots + staff + admin + owner + creator:
+           if op.param3 not in Bots + staff + admin + owner + creator:
               random.choice(DEF).kickoutFromGroup(op.param1,[op.param2])
 	      random.choice(DEF).inviteIntoGroup(op.param1,[op.param3])
            else: 
                pass
 
         if op.type == 19: #kalo admin kekick
-           if op.param2 not in Bots + staff + admin + owner + creator:
+           if op.param3 not in Bots + staff + admin + owner + creator:
               random.choice(DEF).kickoutFromGroup(op.param1,[op.param2])
               random.choice(DEF).inviteIntoGroup(op.param1,[op.param3])
            else:
