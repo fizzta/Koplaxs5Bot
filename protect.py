@@ -544,25 +544,24 @@ def bot(op):
                    random.choice(DEF).kickoutFromGroup(op.param1,[op.param2])
                
         #------Joined User Kick start------#
-        
-        if op.type == 19: #kalo member kekick
-           if op.param3 not in Bots + staff + admin + owner + creator:
-              random.choice(DEF).kickoutFromGroup(op.param1,[op.param2])
-	      random.choice(DEF).inviteIntoGroup(op.param1,[op.param3])
-           else: 
-               pass
+        if op.type == 32: #Yang Cancel Invitan Langsung Ke Kick
+	  if wait["Protectcancel"] == True:
+	    if op.param2 not in Bots:
+	      if op.param2 in Bots:
+		pass
+	      elif op.param2 in admin:
+		pass
+	      elif op.param2 in owner:
+		pass
+	      else:
+		random.choice(KAC).sendText(op.param1, "Jangan Sok Jadi Jagoan Deh Lu Njir.\nAdmin Bukan,Owner Juga Bukan\Kick Ah :v")
+		random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
 
-        if op.type == 19: #kalo admin kekick
-           if op.param3 not in Bots + staff + admin + owner + creator:
-              random.choice(DEF).kickoutFromGroup(op.param1,[op.param2])
-              random.choice(DEF).inviteIntoGroup(op.param1,[op.param3])
-           else:
-               pass
-
-        if op.type == 19: #kalo akun utama kekick
-                if mid in op.param3:
-                    if op.param2 in Bots:
-                        pass
+        if op.type == 19:
+	  if op.param2 not in Bots:
+	    if op.param3 in mid:
+              if op.param2 not in Bots:
+                  pass
                     try:
 			ki.kickoutFromGroup(op.param1,[op.param2])
                         kk.kickoutFromGroup(op.param1,[op.param2])
