@@ -2116,7 +2116,7 @@ def bot(op):
 
                   cb = (cb[:int(len(cb)-1)])
                   msg.contentType = 0
-                  msg.text = cb2 + "\n Total:" + str(len(nama)) + " Member  \nCreator:Muhammad Fahmi Ridhani\nhttp://line.me/ti/p/~fahmi_077\n"
+                  msg.text = cb2 + "\n Total:" + str(len(nama)) + " Member  \nCreator: Jhon\nhttp://line.me/ti/p/~jhon26__\n"
                   msg.contentMetadata ={'MENTION':'{"MENTIONEES":['+cb+']}','EMTVER':'4'}
 
                   try:
