@@ -450,7 +450,7 @@ def bot(op):
                   random.choice(KAC).updateGroup(G)
                   wait["blacklist"][op.param2] = True
 			
-	    if op.param3 in kcmid:
+	      if op.param3 in kcmid:
               if op.param2 not in Bots:
                 try:
                   G = kk.getGroup(op.param1)
@@ -500,7 +500,7 @@ def bot(op):
                   random.choice(KAC).updateGroup(G)
                   wait["blacklist"][op.param2] = True
 	
-	    if op.param3 in kamid:
+	      if op.param3 in kamid:
               if op.param2 not in Bots:
                 try:
                   G = ks.getGroup(op.param1)
@@ -525,7 +525,7 @@ def bot(op):
                   random.choice(KAC).updateGroup(G)
                   wait["blacklist"][op.param2] = True
 			
-	    if op.param3 in kbmid:
+	      if op.param3 in kbmid:
               if op.param2 not in Bots:
                 try:
                   G = ka.getGroup(op.param1)
@@ -550,7 +550,7 @@ def bot(op):
                   random.choice(KAC).updateGroup(G)
                   wait["blacklist"][op.param2] = True
 			
-	    if op.param3 in komid:
+	      if op.param3 in komid:
               if op.param2 not in Bots:
                 try:
                   G = kb.getGroup(op.param1)
@@ -575,7 +575,7 @@ def bot(op):
                   random.choice(KAC).updateGroup(G)
                   wait["blacklist"][op.param2] = True
 			
-	    if op.param3 in kemid:
+	      if op.param3 in kemid:
               if op.param2 not in Bots:
                 try:
                   G = ko.getGroup(op.param1)
@@ -600,7 +600,7 @@ def bot(op):
                   random.choice(KAC).updateGroup(G)
                   wait["blacklist"][op.param2] = True
 			
-	    if op.param3 in kumid:
+	      if op.param3 in kumid:
               if op.param2 not in Bots:
                 try:
                   G = ke.getGroup(op.param1)
@@ -731,7 +731,7 @@ def bot(op):
                 else:
                     cl.sendText(msg.to,Sett)
             elif ("Gn " in msg.text):
-	       if msg.from_ in creator + owner + admin + staff:
+	        if msg.from_ in creator + owner + admin + staff:
                 if msg.toType == 2:
                     X = cl.getGroup(msg.to)
                     X.name = msg.text.replace("Gn ","")
@@ -764,7 +764,7 @@ def bot(op):
                 midd = msg.text.replace("Bot2 kick ","")
                 kk.kickoutFromGroup(msg.to,[midd])
             elif "Invite " in msg.text:
-               if msg.from_ in creator + owner + admin + staff:
+              if msg.from_ in creator + owner + admin + staff:
                 midd = msg.text.replace("Invite ","")
                 cl.findAndAddContactsByMid(midd)
                 cl.inviteIntoGroup(msg.to,[midd])
@@ -779,7 +779,7 @@ def bot(op):
                 kk.findAndAddContactsByMid(midd)
                 kk.inviteIntoGroup(msg.to,[midd])
             elif "Bot invite " in msg.text:
-               if msg.from_ in creator + owner + admin + staff:
+              if msg.from_ in creator + owner + admin + staff:
                 midd = msg.text.replace("Bot invite ","")
                 random.choice(KAC).findAndAddContactsByMid(midd)
                 random.choice(KAC).inviteIntoGroup(msg.to,[midd])
@@ -816,7 +816,7 @@ def bot(op):
                 cl.sendText(msg.to,"Itu Creator Kami")
 #-----------------------------------------------
             elif msg.text in ["Bot:restart"]:
-		if msg.from_ in creator:
+		   if msg.from_ in creator:
 		    cl.sendText(msg.to, "Bot has been restarted")
 		    restart_program()
 		    print "@Restart"
@@ -825,213 +825,213 @@ def bot(op):
 		
     #--------------- SC Add Admin ---------
             elif "Admin @" in msg.text:
-	      if msg.from_ creator + owner:
-              print "[Command]Admin add executing"
-              _name = msg.text.replace("Admin @","")
-              _nametarget = _name.rstrip('  ')
-              gs = cl.getGroup(msg.to)
-              gs = ki.getGroup(msg.to)
-              gs = kk.getGroup(msg.to)
-              targets = []
-              for g in gs.members:
-                if _nametarget == g.displayName:
+	         if msg.from_ creator + owner:
+               print "[Command]Admin add executing"
+               _name = msg.text.replace("Admin @","")
+               _nametarget = _name.rstrip('  ')
+               gs = cl.getGroup(msg.to)
+               gs = ki.getGroup(msg.to)
+               gs = kk.getGroup(msg.to)
+               targets = []
+               for g in gs.members:
+                 if _nametarget == g.displayName:
                   targets.append(g.mid)
-              if targets == []:
-                random.choice(KAC).sendText(msg.to,"Contact not found")
-              else:
-                for target in targets:
-                  try:
-                    admin.append(target)
-                    cl.sendText(msg.to,"Admin Succes~")
-                  except:
-                    pass
-                print "[Command]Staff add executed"
-              else:
-                cl.sendText(msg.to,"Command denied.")
-                cl.sendText(msg.to,"Admin permission required.")
+               if targets == []:
+                 random.choice(KAC).sendText(msg.to,"Contact not found")
+               else:
+                 for target in targets:
+                   try:
+                     admin.append(target)
+                     cl.sendText(msg.to,"Admin Succes~")
+                   except:
+                     pass
+                 print "[Command]Staff add executed"
+               else:
+                 cl.sendText(msg.to,"Command denied.")
+                 cl.sendText(msg.to,"Admin permission required.")
                 
-            elif "Unadmin @" in msg.text:
-	      if msg.from_ creator + owner:
-                print "[Command]Staff remove executing"
-                _name = msg.text.replace("Unadmin @","")
-                _nametarget = _name.rstrip('  ')
-                gs = cl.getGroup(msg.to)
-                gs = ki.getGroup(msg.to)
-                gs = kk.getGroup(msg.to)
-                gs = kc.getGroup(msg.to)
-                targets = []
-                for g in gs.members:
-                    if _nametarget == g.displayName:
+             elif "Unadmin @" in msg.text:
+	       if msg.from_ creator + owner:
+                 print "[Command]Staff remove executing"
+                 _name = msg.text.replace("Unadmin @","")
+                 _nametarget = _name.rstrip('  ')
+                 gs = cl.getGroup(msg.to)
+                 gs = ki.getGroup(msg.to)
+                 gs = kk.getGroup(msg.to)
+                 gs = kc.getGroup(msg.to)
+                 targets = []
+                 for g in gs.members:
+                     if _nametarget == g.displayName:
                         targets.append(g.mid)
-                if targets == []:
-                   random.choice(KAC).sendText(msg.to,"Contact not found")
-                else:
-                   for target in targets:
-                        try:
-                            admin.remove(target)
-                            cl.sendText(msg.to,"Deleted Succes~")
-                        except:
-                            pass
-                print "[Command]Staff remove executed"
-              else:
-                cl.sendText(msg.to,"Command denied.")
-                cl.sendText(msg.to,"Admin permission required.")
+                 if targets == []:
+                    random.choice(KAC).sendText(msg.to,"Contact not found")
+                 else:
+                    for target in targets:
+                         try:
+                             admin.remove(target)
+                             cl.sendText(msg.to,"Deleted Succes~")
+                         except:
+                             pass
+                 print "[Command]Staff remove executed"
+               else:
+                 cl.sendText(msg.to,"Command denied.")
+                 cl.sendText(msg.to,"Admin permission required.")
                 
-            elif msg.text in ["Adminlist","adminlist"]:
-              if creator + owner == []:
+             elif msg.text in ["Adminlist","adminlist"]:
+               if creator + owner == []:
                   cl.sendText(msg.to,"The stafflist is empty")
-              else:
-                  cl.sendText(msg.to,"Tunggu...")
-                  mc = "||Admin [ɴɪɢʜᴛ ʀᴀɪᴅ]||\n=====================\n"
-                  for mi_d in admin:
-                      mc += "••>" +cl.getContact(mi_d).displayName + "\n"
-                  cl.sendText(msg.to,mc)
-                  print "[Command]Adminlist executed"
+               else:
+                   cl.sendText(msg.to,"Tunggu...")
+                   mc = "||Admin [ɴɪɢʜᴛ ʀᴀɪᴅ]||\n=====================\n"
+                   for mi_d in admin:
+                       mc += "••>" +cl.getContact(mi_d).displayName + "\n"
+                   cl.sendText(msg.to,mc)
+                   print "[Command]Adminlist executed"
     #----------------SC ADD STAFF----------------------
             elif "Staff @" in msg.text:
-	      if msg.from_ creator + owner + admin:
-              print "[Command]Staff add executing"
-              _name = msg.text.replace("Staff @","")
-              _nametarget = _name.rstrip('  ')
-              gs = cl.getGroup(msg.to)
-              gs = ki.getGroup(msg.to)
-              gs = kk.getGroup(msg.to)
-              targets = []
-              for g in gs.members:
-                if _nametarget == g.displayName:
-                  targets.append(g.mid)
-              if targets == []:
-                random.choice(KAC).sendText(msg.to,"Contact not found")
-              else:
-                for target in targets:
-                  try:
-                    admin.append(target)
-                    cl.sendText(msg.to,"Staff Succes~")
-                  except:
-                    pass
-                print "[Command]Staff add executed"
-              else:
-                cl.sendText(msg.to,"Command denied.")
-                cl.sendText(msg.to,"Admin permission required.")
+	        if msg.from_ creator + owner + admin:
+               print "[Command]Staff add executing"
+               _name = msg.text.replace("Staff @","")
+               _nametarget = _name.rstrip('  ')
+               gs = cl.getGroup(msg.to)
+               gs = ki.getGroup(msg.to)
+               gs = kk.getGroup(msg.to)
+               targets = []
+               for g in gs.members:
+                 if _nametarget == g.displayName:
+                   targets.append(g.mid)
+               if targets == []:
+                 random.choice(KAC).sendText(msg.to,"Contact not found")
+               else:
+                 for target in targets:
+                   try:
+                     admin.append(target)
+                     cl.sendText(msg.to,"Staff Succes~")
+                   except:
+                     pass
+                 print "[Command]Staff add executed"
+               else:
+                 cl.sendText(msg.to,"Command denied.")
+                 cl.sendText(msg.to,"Admin permission required.")
                 
             elif "Unstaff @" in msg.text:
-	      if msg.from_ creator + owner:
-                print "[Command]Staff remove executing"
-                _name = msg.text.replace("Unstaff @","")
-                _nametarget = _name.rstrip('  ')
-                gs = cl.getGroup(msg.to)
-                gs = ki.getGroup(msg.to)
-                gs = kk.getGroup(msg.to)
-                gs = kc.getGroup(msg.to)
-                targets = []
-                for g in gs.members:
-                    if _nametarget == g.displayName:
+	        if msg.from_ creator + owner:
+                 print "[Command]Staff remove executing"
+                 _name = msg.text.replace("Unstaff @","")
+                 _nametarget = _name.rstrip('  ')
+                 gs = cl.getGroup(msg.to)
+                 gs = ki.getGroup(msg.to)
+                 gs = kk.getGroup(msg.to)
+                 gs = kc.getGroup(msg.to)
+                 targets = []
+                 for g in gs.members:
+                     if _nametarget == g.displayName:
                         targets.append(g.mid)
-                if targets == []:
-                   random.choice(KAC).sendText(msg.to,"Contact not found")
-                else:
-                   for target in targets:
-                        try:
-                            admin.remove(target)
-                            cl.sendText(msg.to,"Deleted Succes~")
-                        except:
-                            pass
-                print "[Command]Staff remove executed"
-              else:
-                cl.sendText(msg.to,"Command denied.")
-                cl.sendText(msg.to,"Admin permission required.")
-                
-            elif msg.text in ["Stafflist","stafflist"]:
-              if creator + owner + admin == []:
-                  cl.sendText(msg.to,"The stafflist is empty")
-              else:
-                  cl.sendText(msg.to,"Tunggu...")
-                  mc = "||Staff [ɴɪɢʜᴛ ʀᴀɪᴅ]||\n=====================\n"
-                  for mi_d in admin:
-                      mc += "••>" +cl.getContact(mi_d).displayName + "\n"
-                  cl.sendText(msg.to,mc)
-                  print "[Command]Stafflist executed"
-    #-------------- Add Friends ------------
-            elif "Bot Add @" in msg.text:
-              if msg.toType == 2:
-                  print "[Command]Add executing"
-                  _name = msg.text.replace("Bot Add @","")
-                  _nametarget = _name.rstrip('  ')
-                  gs = cl.getGroup(msg.to)
-                  gs = ki.getGroup(msg.to)
-                  gs = kk.getGroup(msg.to)
-                  targets = []
-                  for g in gs.members:
-                    if _nametarget == g.displayName:
-                      targets.append(g.mid)
-                  if targets == []:
+                 if targets == []:
                     random.choice(KAC).sendText(msg.to,"Contact not found")
-                  else:
+                 else:
                     for target in targets:
-                      try:
-                        cl.findAndAddContactsByMid(target)
-                        ki.findAndAddContactsByMid(target)
-                        ki2.findAndAddContactsByMid(target)
-                      except:
-                        cl.sendText(msg.to,"Error")
-              #else:
-                #cl.sendText(msg.to,"Perintah Ditolak")
-                #cl.sendText(msg.to,"Perintah ini Hana Untuk Owner Kami")
+                         try:
+                             admin.remove(target)
+                             cl.sendText(msg.to,"Deleted Succes~")
+                         except:
+                             pass
+                 print "[Command]Staff remove executed"
+               else:
+                 cl.sendText(msg.to,"Command denied.")
+                 cl.sendText(msg.to,"Admin permission required.")
+                
+             elif msg.text in ["Stafflist","stafflist"]:
+               if creator + owner + admin == []:
+                   cl.sendText(msg.to,"The stafflist is empty")
+               else:
+                   cl.sendText(msg.to,"Tunggu...")
+                   mc = "||Staff [ɴɪɢʜᴛ ʀᴀɪᴅ]||\n=====================\n"
+                   for mi_d in admin:
+                       mc += "••>" +cl.getContact(mi_d).displayName + "\n"
+                   cl.sendText(msg.to,mc)
+                   print "[Command]Stafflist executed"
+    #-------------- Add Friends ------------
+             elif "Bot Add @" in msg.text:
+               if msg.toType == 2:
+                   print "[Command]Add executing"
+                   _name = msg.text.replace("Bot Add @","")
+                   _nametarget = _name.rstrip('  ')
+                   gs = cl.getGroup(msg.to)
+                   gs = ki.getGroup(msg.to)
+                   gs = kk.getGroup(msg.to)
+                   targets = []
+                   for g in gs.members:
+                     if _nametarget == g.displayName:
+                       targets.append(g.mid)
+                   if targets == []:
+                     random.choice(KAC).sendText(msg.to,"Contact not found")
+                   else:
+                     for target in targets:
+                       try:
+                         cl.findAndAddContactsByMid(target)
+                         ki.findAndAddContactsByMid(target)
+                         kk.findAndAddContactsByMid(target)
+                       except:
+                         cl.sendText(msg.to,"Error")
+               #else:
+                 #cl.sendText(msg.to,"Perintah Ditolak")
+                 #cl.sendText(msg.to,"Perintah ini Hana Untuk Owner Kami")
                   
     #-------------=SC AllBio=----------------
             elif "Allbio:" in msg.text:
               if msg.from_ in creator + owner:
-                string = msg.text.replace("Allbio:","")
-                if len(string.decode('utf-8')) <= 500:
-                    profile = cl.getProfile()
-                    profile.statusMessage = string
-                    cl.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 500:
-                    profile = ki.getProfile()
-                    profile.statusMessage = string
-                    ki.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 500:
-                    profile = kk.getProfile()
-                    profile.statusMessage = string
-                    kk.updateProfile(profile)
-		if len(string.decode('utf-8')) <= 500:
-                    profile = kc.getProfile()
-                    profile.statusMessage = string
-                    kc.updateProfile(profile)
-		if len(string.decode('utf-8')) <= 500:
-                    profile = ks.getProfile()
-                    profile.statusMessage = string
-                    ks.updateProfile(profile)
-		if len(string.decode('utf-8')) <= 500:
-                    profile = ka.getProfile()
-                    profile.statusMessage = string
-                    ka.updateProfile(profile)
-		if len(string.decode('utf-8')) <= 500:
-                    profile = kb.getProfile()
-                    profile.statusMessage = string
-                    kb.updateProfile(profile)
-		if len(string.decode('utf-8')) <= 500:
-                    profile = ko.getProfile()
-                    profile.statusMessage = string
-                    ko.updateProfile(profile)
-		if len(string.decode('utf-8')) <= 500:
-                    profile = ke.getProfile()
-                    profile.statusMessage = string
-                    ke.updateProfile(profile)
-		if len(string.decode('utf-8')) <= 500:
-                    profile = ku.getProfile()
-                    profile.statusMessage = string
-                    ku.updateProfile(profile)
+                 string = msg.text.replace("Allbio:","")
+                 if len(string.decode('utf-8')) <= 500:
+                     profile = cl.getProfile()
+                     profile.statusMessage = string
+                     cl.updateProfile(profile)
+                 if len(string.decode('utf-8')) <= 500:
+                     profile = ki.getProfile()
+                     profile.statusMessage = string
+                     ki.updateProfile(profile)
+                 if len(string.decode('utf-8')) <= 500:
+                     profile = kk.getProfile()
+                     profile.statusMessage = string
+                     kk.updateProfile(profile)
+		      if len(string.decode('utf-8')) <= 500:
+                     profile = kc.getProfile()
+                     profile.statusMessage = string
+                     kc.updateProfile(profile)
+		      if len(string.decode('utf-8')) <= 500:
+                     profile = ks.getProfile()
+                     profile.statusMessage = string
+                     ks.updateProfile(profile)
+		      if len(string.decode('utf-8')) <= 500:
+                     profile = ka.getProfile()
+                     profile.statusMessage = string
+                     ka.updateProfile(profile)
+		      if len(string.decode('utf-8')) <= 500:
+                     profile = kb.getProfile()
+                     profile.statusMessage = string
+                     kb.updateProfile(profile)
+		      if len(string.decode('utf-8')) <= 500:
+                     profile = ko.getProfile()
+                     profile.statusMessage = string
+                     ko.updateProfile(profile)
+		      if len(string.decode('utf-8')) <= 500:
+                     profile = ke.getProfile()
+                     profile.statusMessage = string
+                     ke.updateProfile(profile)
+		      if len(string.decode('utf-8')) <= 500:
+                     profile = ku.getProfile()
+                     profile.statusMessage = string
+                     ku.updateProfile(profile)
     #--------------=Finish=----------------
     #--------------= SC Ganti nama Owner=--------------
             elif "MyName:" in msg.text:
               if msg.from_ in creator + owner:
-                string = msg.text.replace("MyName:","")
-                if len(string.decode('utf-8')) <= 20:
-                    profile = cl.getProfile()
-                    profile.displayName = string
-                    cl.updateProfile(profile)
-                    cl.sendText(msg.to,"Update Name Menjadi : " + string + "")
+                 string = msg.text.replace("MyName:","")
+                 if len(string.decode('utf-8')) <= 20:
+                     profile = cl.getProfile()
+                     profile.displayName = string
+                     cl.updateProfile(profile)
+                     cl.sendText(msg.to,"Update Name Menjadi : " + string + "")
     #-------------- copy profile----------
             elif "Spam " in msg.text:
                 txt = msg.text.split(" ")
@@ -1632,20 +1632,20 @@ def bot(op):
                         if wait["lang"] == "JP":
                             cl.sendText(msg.to,"Invitation refused turned off\nTo turn on please specify the number of people and send")
                         else:
-                            cl.sendText(msg.to,"å…³äº†é‚€è¯·æ‹’ç»�ã€‚è¦�æ—¶å¼€è¯·æŒ‡å®šäººæ•°å�‘é€�")
+                            cl.sendText(msg.to,"å…³äº†é‚€è¯•æ‹’ç»�ã€‚è¦�æ—¶å¼€è¯•æŒ‡å®šäººæ•°å�‘é€�")
                     else:
                         num =  int(strnum)
                         wait["autoCancel"]["on"] = True
                         if wait["lang"] == "JP":
                             cl.sendText(msg.to,strnum + "The group of people and below decided to automatically refuse invitation")
                         else:
-                            cl.sendText(msg.to,strnum + "ä½¿äººä»¥ä¸‹çš„å°�ç»„ç”¨è‡ªåŠ¨é‚€è¯·æ‹’ç»�")
+                            cl.sendText(msg.to,strnum + "ä½¿äººä»¥ä¸‹çš„å°�ç»„ç”¨è‡ªåŠ¨é‚€è¯•æ‹’ç»�")
                 except:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Value is wrong")
                     else:
                         cl.sendText(msg.to,"Bizarre ratings")
-            elif msg.text in ["å¼·åˆ¶è‡ªå‹•é€€å‡º:ã‚ªãƒ³","Leave on","Auto leave:on","å¼·åˆ¶è‡ªå‹•é€€å‡ºï¼šé–‹"]:
+            elif msg.text in ["å¼•åˆ¶è‡ªå‹•é€€å‡º:ã‚ªãƒ³","Leave on","Auto leave:on","å¼•åˆ¶è‡ªå‹•é€€å‡ºï¼šé–‹"]:
               if msg.from_ in creator + owner:
                 if wait["leaveRoom"] == True:
                     if wait["lang"] == "JP":
@@ -1658,7 +1658,7 @@ def bot(op):
                         cl.sendText(msg.to,"done")
                     else:
                         cl.sendText(msg.to,"è¦�äº†å¼€ã€‚")
-            elif msg.text in ["å¼·åˆ¶è‡ªå‹•é€€å‡º:ã‚ªãƒ•","Leave off","Auto leave:off","å¼·åˆ¶è‡ªå‹•é€€å‡ºï¼šé—œ"]:
+            elif msg.text in ["å¼•åˆ¶è‡ªå‹•é€€å‡º:ã‚ªãƒ•","Leave off","Auto leave:off","å¼•åˆ¶è‡ªå‹•é€€å‡ºï¼šé—œ"]:
               if msg.from_ in creator + owner:
                 if wait["leaveRoom"] == False:
                     if wait["lang"] == "JP":
@@ -1737,7 +1737,7 @@ def bot(op):
                 if wait["lang"] == "JP":
                     cl.sendText(msg.to,"All invitations have been refused")
                 else:
-                    cl.sendText(msg.to,"æ‹’ç»�äº†å…¨éƒ¨çš„é‚€è¯·ã€‚")
+                    cl.sendText(msg.to,"æ‹’ç»�äº†å…¨éƒ¨çš„é‚€è¯•ã€‚")
             elif "album removeat’" in msg.text:
                 gid = msg.text.replace("album removeat’","")
                 albums = cl.getAlbum(gid)["result"]["items"]
@@ -2386,14 +2386,14 @@ def bot(op):
 
       #-------------Fungsi Banned Send Contact Start------------------#
             elif msg.text in ["Ban"]:
-              #if msg.from_ in admin:
+              if msg.from_ in creator + owner + admin + staff:
                 wait["wblacklist"] = True
                 cl.sendText(msg.to,"Kirim contact")
                 #ki.sendText(msg.to,"Kirim contact")
                 #kk.sendText(msg.to,"Kirim contact")
                 #kc.sendText(msg.to,"Kirim contact")
             elif msg.text in ["Unban"]:
-              #if msg.from_ in admin:
+              if msg.from_ in creator + owner + admin + staff:
                 wait["dblacklist"] = True
                 cl.sendText(msg.to,"Kirim contact")
                 #ki.sendText(msg.to,"Kirim contact")
@@ -2402,7 +2402,7 @@ def bot(op):
       #-------------Fungsi Banned Send Contact Finish------------------#
             elif msg.text in ["Creator"]:
               msg.contentType = 13
-              msg.contentMetadata = {'mid': mid}
+              msg.contentMetadata = {'mid':'ua35835da9375cdfc874eaa9b279997da'}
               cl.sendText(msg.to,"======================")
               cl.sendMessage(msg)
               cl.sendText(msg.to,"======================")
