@@ -779,7 +779,7 @@ def bot(op):
                 kk.findAndAddContactsByMid(midd)
                 kk.inviteIntoGroup(msg.to,[midd])
             elif "Bot invite " in msg.text:
-               if msg.from_ in creator + owner + admin + staff::
+               if msg.from_ in creator + owner + admin + staff:
                 midd = msg.text.replace("Bot invite ","")
                 random.choice(KAC).findAndAddContactsByMid(midd)
                 random.choice(KAC).inviteIntoGroup(msg.to,[midd])
