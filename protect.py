@@ -14,55 +14,55 @@ import subprocess
 #kk.login(qr=True)
 #kk.loginResult()
 
-cl = LINETCR.LINE() ##Shunsui Kyōraku(LINE)
+cl = LINETCR.LINE() # [BOT 1]
 cl.login(qr=True)
 cl.loginResult()
 
-ki = LINETCR.LINE() #Ichibē Hyōsube(LINE 1)
+ki = LINETCR.LINE() # [BOT 2]
 ki.login(qr=True)
 ki.loginResult()
 
-kk = LINETCR.LINE() #Yoruichi Shihōin(LINE 2)
+kk = LINETCR.LINE() # [BOT 3]
 kk.login(qr=True)
 kk.loginResult()
 
-kc = LINETCR.LINE() #Kenpachi Kiganjō(LINE 3)
+kc = LINETCR.LINE() # [BOT 4]
 kc.login(qr=True)
 kc.loginResult()
 
-ks = LINETCR.LINE() #Nanao Ise(LINE 4)
+ks = LINETCR.LINE() # [BOT 5]
 ks.login(qr=True)
 ks.loginResult()
 
-ka = LINETCR.LINE() #Momo Hinamori(LINE 5)
+ka = LINETCR.LINE() # [BOT 6]
 ka.login(qr=True)
 ka.loginResult()
 
-kb = LINETCR.LINE() #Rangiku Matsumoto(LINE 6)
+kb = LINETCR.LINE() # [BOT 7]
 kb.login(qr=True)
 kb.loginResult()
 
-ko = LINETCR.LINE() #Chikane Iba(LINE 7)
+ko = LINETCR.LINE() # [BOT 8]
 ko.login(qr=True)
 ko.loginResult()
 
-ke = LINETCR.LINE() #Hiyori Sarugaki(LINE 8)
+ke = LINETCR.LINE() # [BOT 9]
 ke.login(qr=True)
 ke.loginResult()
 
-ku = LINETCR.LINE() #Lisa Yadōmaru(LINE 9)
+ku = LINETCR.LINE() # [BOT 10]
 ku.login(qr=True)
 ku.loginResult()
 
-k1 = LINETCR.LINE() #Kicker(Line 10)
+k1 = LINETCR.LINE() # [BOT 11]
 k1.login(qr=True)
 k1.loginResult()
 
-k2 = LINETCR.LINE() #Kicker(Line 11)
+k2 = LINETCR.LINE() # [BOT 12]
 k2.login(qr=True)
 k2.loginResult()
 
-k3 = LINETCR.LINE()
+k3 = LINETCR.LINE() # [BOT 13]
 k3.login(qr=True)
 k3.loginResult()
 
@@ -136,13 +136,10 @@ helpMessage =""" [>>>SHINIGAMI BOT<<<]
 [*] Join off
 
  
-======================================
-Open Jasa Protect Grup 
-
-Minat PM :http://line.me/ti/p/~jhon26__
-
-Nb:List harga
-======================================
+====================
+    [ɴɪɢʜᴛ ʀᴀɪᴅ]
+  ketik:List harga
+====================
 """
 
 Setgroup =""" 
@@ -164,19 +161,18 @@ Cmid = kc.getProfile().mid
 Dmid = ks.getProfile().mid
 Emid = ka.getProfile().mid
 Fmid = kb.getProfile().mid
-Gmid = ko.getProfile().mid #Nami
-Hmid = ke.getProfile().mid #Robin
-Imid = ku.getProfile().mid #Jinbei
-mid = cl.getProfile().mid #Akun Utama
-mid1 = k1.getProfile().mid #Backup
-mid2 = k2.getProfile().mid #Backup
+Gmid = ko.getProfile().mid
+Hmid = ke.getProfile().mid
+Imid = ku.getProfile().mid
+mid1 = k1.getProfile().mid
+mid2 = k2.getProfile().mid
 mid3 = k3.getProfile().mid
 
-Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,mid1,mid2,mid3,"ud7a8fbcc2af037c2c5bf181b89fda5f7","ue027db6fbfa316a7ec28ed8d2cc2757d","ua398858a0ae7d4b27f42273fc83f05df"]
-staff=["ud7a8fbcc2af037c2c5bf181b89fda5f7","ue027db6fbfa316a7ec28ed8d2cc2757d","ua398858a0ae7d4b27f42273fc83f05df"]
-admin=["ud7a8fbcc2af037c2c5bf181b89fda5f7","ue027db6fbfa316a7ec28ed8d2cc2757d","ua398858a0ae7d4b27f42273fc83f05df","u4aae4762cdff9c8ee2ea89b615bd07e9"]
-owner=["ud7a8fbcc2af037c2c5bf181b89fda5f7","ue027db6fbfa316a7ec28ed8d2cc2757d","ua398858a0ae7d4b27f42273fc83f05df"]
-creator=["ud7a8fbcc2af037c2c5bf181b89fda5f7"]
+Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,mid1,mid2,mid3]
+staff=["ua35835da9375cdfc874eaa9b279997da"]
+admin=["ua35835da9375cdfc874eaa9b279997da"]
+owner=["ua35835da9375cdfc874eaa9b279997da"]
+creator=["ua35835da9375cdfc874eaa9b279997da"]
 wait = {
     'contact':False,
     'autoJoin':True,
@@ -299,10 +295,10 @@ def bot(op):
                     cl.sendText(op.param1,str(wait["message"]))
         #------------------------------------#
         if op.type == 13:
-            if mid in op.param3:
+            if admin in op.param3:
                 if wait["autoJoin"] == True:
                     cl.acceptGroupInvitation(op.param1)
-                    cl.sendText(op.param1,"Thanks For Invite Me.Made id line day_hard")
+                    cl.sendText(op.param1,"Set your bots")
                     print "BOT 1 Joined"
                 else:                                                                                        
                     print "autoJoin is Off"
@@ -503,7 +499,7 @@ def bot(op):
                     Ti = cl.reissueGroupTicket(op.param1) 
                     
             if op.param3 in mid3:
-                if op.param2 in mid:
+                if op.param2 in mid :
                     X = cl.getGroup(op.param1)
                     X.preventJoinByTicket = False
                     cl.updateGroup(X)
@@ -584,8 +580,9 @@ def bot(op):
                pass
 
         if op.type == 19:
-                if mid in op.param3:
-                    if op.param2 in Bots:
+	    if op.param2 not in Bots:
+                if op.param3 in mid:
+                    if op.param2 not in Bots:
                         pass
                     try:
                         kk.kickoutFromGroup(op.param1,[op.param2])
@@ -630,7 +627,7 @@ def bot(op):
                         wait["blacklist"][op.param2] = True
  
                 if Amid in op.param3:
-                    if op.param2 in Bots:
+                    if op.param2 not in Bots:
                         pass
                     try:
                         k2.kickoutFromGroup(op.param1,[op.param2])
@@ -678,7 +675,7 @@ def bot(op):
                         wait["blacklist"][op.param2] = True
 
                 if Bmid in op.param3:
-                    if op.param2 in Bots:
+                    if op.param2 not in Bots:
                         pass
                     try:
                         k1.kickoutFromGroup(op.param1,[op.param2])
@@ -725,7 +722,7 @@ def bot(op):
                         wait["blacklist"][op.param2] = True
 
                 if Cmid in op.param3:
-                    if op.param2 in Bots:
+                    if op.param2 not in Bots:
                         pass
                     try:
                         kk.kickoutFromGroup(op.param1,[op.param2])
@@ -772,7 +769,7 @@ def bot(op):
                         
                         
                 if Dmid in op.param3:
-                    if op.param2 in Bots:
+                    if op.param2 not in Bots:
                         pass
                     try:
                         random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -818,7 +815,7 @@ def bot(op):
                         wait["blacklist"][op.param2] = True
                         
                 if Emid in op.param3:
-                    if op.param2 in Bots:
+                    if op.param2 not in Bots:
                         pass
                     try:
                         random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -864,7 +861,7 @@ def bot(op):
                         wait["blacklist"][op.param2] = True
                         
                 if Fmid in op.param3:
-                    if op.param2 in Bots:
+                    if op.param2 not in Bots:
                         pass
                     try:
                         random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -910,7 +907,7 @@ def bot(op):
                         wait["blacklist"][op.param2] = True
                         
                 if Gmid in op.param3:
-                    if op.param2 in Bots:
+                    if op.param2 not in Bots:
                         pass
                     try:
                         random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -956,7 +953,7 @@ def bot(op):
                         wait["blacklist"][op.param2] = True
                         
                 if Hmid in op.param3:
-                    if op.param2 in Bots:
+                    if op.param2 not in Bots:
                         pass
                     try:
                         random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -1952,35 +1949,38 @@ def bot(op):
                     else:
                         cl.sendText(msg.to, "Ketik Cctv dulu\nBaru Ketik Ciduk")
 
-#-------------------------------------------------
-            elif "/lirik " in msg.text.lower():
-                songname = msg.text.replace("/lirik ","")
-                params = {"songname":songname}
-                r = requests.get('https://ide.fdlrcn.com/workspace/yumi-apis/joox?' + urllib.urlencode(params))
-                data = r.text
-                data = json.loads(data)
-                for song in data:
-                    cl.sendText(msg.to,song[5])
-                    print "[Command] Lirik"
-#---------------------------------------------------
-            elif 'music ' in msg.text.lower():
-                try:
-                    songname = msg.text.lower().replace('music ','')
-                    params = {'songname': songname}
-                    r = requests.get('http://ide.fdlrcn.com/workspace/yumi-apis/joox?' + urllib.urlencode(params))
-                    data = r.text
-                    data = json.loads(data)
-                    for song in data:
-                        hasil = 'This is Your Music\n'
-                        hasil += 'Judul : ' + song[0]
-                        hasil += '\nDurasi : ' + song[1]
-                        hasil += '\nLink Download : ' + song[4]
-                        cl.sendText(msg.to, hasil)
-                        cl.sendText(msg.to, "Please Wait for audio...")
-                        cl.sendAudioWithURL(msg.to, song[4])
-		except Exception as njer:
-		        cl.sendText(msg.to, str(njer))
+#---------------------Sc invite owner ke group------
+            elif "/invitemeto: " in msg.text:
+              #if msg.from_ in admin:
+                gid = msg.text.replace("/invitemeto: ","")
+                if gid == "":
+                  ki.sendText(msg.to,"Invalid group id")
+                else:
+                  try:
+                    ki.findAndAddContactsByMid(msg.from_)
+                    ki.inviteIntoGroup(gid,[msg.from_])
+                  except:
+                    ki.sendText(msg.to,"Mungkin saya tidak di dalaam grup itu")
+#--------===---====--------------
+#--------------Fungsi Broadcast Finish-----------#
 
+            elif msg.text in ["LG"]:
+              #if msg.from_ in admin:
+                gids = cl.getGroupIdsJoined()
+                h = ""
+                for i in gids:
+                  #####gn = cl.getGroup(i).name
+                  h += "[•]%s Member\n" % (cl.getGroup(i).name   +"👉"+str(len(cl.getGroup(i).members)))
+                  cl.sendText(msg.to,"=======[List Group]======\n"+ h +"Total Group :"+str(len(gids)))
+                
+            elif msg.text in ["LG2"]:
+              #if msg.from_ in admin:
+                gid = cl.getGroupIdsJoined()
+                h = ""
+                for i in gid:
+                    h += "[%s]:%s\n" % (cl.getGroup(i).name,i)
+                cl.sendText(msg.to,h)
+      #--------------List Group------------
 
          #----------------Fungsi Join Group Start-----------------------#
             elif msg.text in ["Phewit","Kuy","Join"]:
@@ -2672,7 +2672,7 @@ def bot(op):
 #-----------------------------------------------
 
        #-------------Fungsi Respon Start---------------------#
-            elif msg.text in ["Absen","SHINIGAMI","Respon"]:
+            elif msg.text in ["Absen","Respon"]:
               if msg.from_ in staff + admin + owner:
                 ko.sendText(msg.to,"ɴɪɢʜᴛ ʀᴀɪᴅ [BOT 1]")
                 ki.sendText(msg.to,"ɴɪɢʜᴛ ʀᴀɪᴅ [BOT 2]")
@@ -2861,33 +2861,6 @@ thread2 = threading.Thread(target=nameUpdate)
 thread2.daemon = True
 thread2.start()
 
-
-
-def findLyric(to,song):
-    params = {'songname':song}
-    r = requests.get('https://ide.fdlrcn.com/workspace/yumi-apis/joox?'+urllib.urlencode(params))
-    data = r.text
-    data = data.encode('utf-8')
-    data = json.loads(data)
-    for song in data:
-        ki.sendText(to,"Lyrics Of " + song[0] + ":\n\n"+ song[5])
-    time.sleep(100)
-thread2 = threading.Thread(target=findLyric)
-thread2.daemon = True
-thread2.start()
-
-def findMusic(to,song):
-    params = {'songname':song}
-    r = requests.get('https://ide.fdlrcn.com/workspace/yumi-apis/joox?'+urllib.urlencode(params))
-    data = r.text
-    data = data.encode('utf-8')
-    data = json.loads(data)
-    for song in data:
-        ki.sendText(to,"This Your Music.\n\nJudul: " + song[0] + "\nWaktu: " + song[1] + "\nLink: " + song[3] + "\nDownload: " + song[4])
-    time.sleep(100)
-thread2 = threading.Thread(target=findMusic)
-thread2.daemon = True
-thread2.start()
 
 while True:
     try:
