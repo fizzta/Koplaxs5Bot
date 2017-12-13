@@ -71,7 +71,7 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" [>>>SHINIGAMI BOT<<<]
+helpMessage =""" [>>>[ɴɪɢʜᴛ ʀᴀɪᴅ] BOT<<<]
 
 =====================
 [>>Public Command<<]
