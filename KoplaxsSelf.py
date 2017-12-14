@@ -91,8 +91,6 @@ helpMessage =""" [>>>[ɴɪɢʜᴛ ʀᴀɪᴅ] BOT<<<]
 [*] Adminlist
 [*] Blacklist @
 [*] Banned @
-[*] Lurk on
-[*] Lurk off
 =====================
 [>>Protect Command<<]
 =====================
@@ -307,7 +305,7 @@ def bot(op):
         if op.type == 13:
             if mid in op.param3:
               if wait["autoJoin"] == True:
-                if op.param2 in Bots:
+                if op.param2 in creator and owner and admin:
                   cl.acceptGroupInvitation(op.param1)
                 else:
                   cl.rejectGroupInvitation(op.param1)
