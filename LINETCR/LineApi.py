@@ -44,9 +44,9 @@ class LINE:
     self.authToken = self.Talk.authToken
     self.cert = self.Talk.cert
     self._headers = {
-              'X-Line-Application': 'IOSIPAD\t7.14.0\tiPhone OS\t10.12.0', 
-              'X-Line-Access': self.authToken, 
-              'User-Agent': 'Line/7.14.0'
+              'X-Line-Application': 'CHROMEOS	1.4.17	Chrome_OS	1, CHROMEOS	1.4.17	Chrome_OS	1', 
+              'X-Line-Access': 'EoEjO2QmTCFcfndr6bp7.LaPQ2EgcvCekTAknQ7bMnW.pAT9LcwWPELEgN1o935UtbfOq4inGDcPQ6RXmp2vzMw=', 
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 UBrowser/7.0.185.1002 Safari/537.36'
    }
     self.Poll = Poll(self.authToken)
     self.channel = channel.Channel(self.authToken)
