@@ -18,9 +18,9 @@ class Channel:
     http_query_path = "/S4"
     channel_query_path = "/CH4"
 
-    UA = "Line/7.14.0"
-    LA = "IOSIPAD\t7.14.0\tiPhone OS\t10.12.0"
-    
+    UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36"
+    LA = "CHROMEOS\t1.4.17\tChrome_OS\t1"
+
     authToken = None
     mid = None
     channel_access_token = None

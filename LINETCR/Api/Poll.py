@@ -11,12 +11,8 @@ from curve.ttypes import *
 class Poll:
 
   client = None
-
-  auth_query_path = "/api/v4/TalkService.do";
   http_query_path = "/S4";
   polling_path = "/P4";
-  host = "gd2.line.naver.jp";
-  port = 443;
 
   UA = "Line/7.14.0"
   LA = "IOSIPAD\t7.14.0\tiPhone OS\t10.12.0"
@@ -24,13 +20,13 @@ class Poll:
   rev = 0
 
   def __init__(self, authToken):
-    self.transport = THttpClient.THttpClient('https://gd2.line.naver.jp:443'+ self.http_query_path)
+    self.transport = THttpClient.THttpClient('https://gw.line.naver.jp:443'+ self.http_query_path)
     self.transport.setCustomHeaders({
       "User-Agent" : self.UA,
       "X-Line-Application" : self.LA,
       "X-Line-Access": authToken
     });
-    self.protocol = TCompactProtocol.TCompactProtocol(self.transport);
+    self.protocol = TCompactProtocol.TCompactProtocol(self.transport)
     self.client = LineService.Client(self.protocol)
     self.rev = self.client.getLastOpRevision()
     self.transport.path = self.polling_path

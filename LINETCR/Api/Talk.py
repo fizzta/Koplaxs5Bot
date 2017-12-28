@@ -17,7 +17,7 @@ class Talk:
   auth_query_path = "/api/v4/TalkService.do";
   http_query_path = "/S4";
   wait_for_mobile_path = "/Q";
-  host = "gd2.line.naver.jp";
+  host = "gw.line.naver.jp";
   port = 443;
 
   UA = "Line/7.14.0"
@@ -25,9 +25,10 @@ class Talk:
 
   authToken = None
   cert = None
+  Headers = {}
 
   def __init__(self):
-    self.transport = THttpClient.THttpClient('https://gd2.line.naver.jp:443'+self.auth_query_path)
+    self.transport = THttpClient.THttpClient('https://gw.line.naver.jp:443'+self.auth_query_path)
     self.transport.setCustomHeaders({
       "User-Agent" : self.UA,
       "X-Line-Application" : self.LA,
@@ -64,6 +65,7 @@ class Talk:
       })
 
       self.authToken = result.authToken
+      self.set_Headers('X-Line-Access',self.authToken)
       self.cert = result.certificate
       self.transport.path = self.http_query_path
 
@@ -75,6 +77,7 @@ class Talk:
 			 "User-Agent" : self.UA,
        "X-Line-Access" : result.authToken
       })
+      self.set_Headers('X-Line-Access',self.authToken)
       self.transport.path = self.http_query_path
 
   def TokenLogin(self, authToken):
@@ -84,13 +87,14 @@ class Talk:
       "X-Line-Access" : authToken,
     })
     self.authToken = authToken
+    self.set_Headers('X-Line-Access',self.authToken)
     self.transport.path = self.http_query_path
 
   def qrLogin(self, callback):
     self.transport.path = self.auth_query_path
 
-    qr = self.client.getAuthQrcode(True, "Bot")
-    callback("Copy Kode QR nya Plak\nJangan Lama2\nBatas 1 menit:\n line://au/q/" + qr.verifier)
+    qr = self.client.getAuthQrcode(True, "TGB-CHROME")
+    callback("Copas Link dibawah ini ke LINE\nline://au/q/" + qr.verifier)
 
     r = requests.get("https://" + self.host + self.wait_for_mobile_path, headers={
       "X-Line-Application": self.LA,
@@ -105,10 +109,13 @@ class Talk:
       "X-Line-Access": lr.authToken
     })
     self.authToken = lr.authToken
+    self.set_Headers('X-Line-Access',self.authToken)
     self.cert = lr.certificate
     self.transport.path = self.http_query_path
-
-
+    
+  def set_Headers(self, argument, value):
+    self.Headers[argument] = value
+  
   def __crypt(self, mail, passwd, RSA):
     message = (chr(len(RSA.sessionKey)) + RSA.sessionKey +
                    chr(len(mail)) + mail +
