@@ -110,7 +110,7 @@ k4mid = ki4.getProfile().mid
 Bots=[mid,kimid,ki2mid,ki3mid,ki4mid]
 owner =["ua35835da9375cdfc874eaa9b279997da"]
 admin = ["ua35835da9375cdfc874eaa9b279997da"]
-staff = ["........"]
+staff = ["ua35835da9375cdfc874eaa9b279997da"]
 wait = {
     'contact':False,
     'autoJoin':True,
