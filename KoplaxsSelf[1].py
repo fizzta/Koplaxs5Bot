@@ -29,7 +29,7 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" [꧁рsчÇнø тздм вøт꧂]
+helpMessage ="""[꧁рsчÇнø тздм вøт꧂]
 
 =====================
 [꧁Public Command꧂]
